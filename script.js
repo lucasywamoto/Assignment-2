@@ -2,7 +2,9 @@ const studentNames = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace
 
 sendMessages = (array, message) => {
     array.forEach((name, index) => {
+
         var localeDateTime = (new Date()).toLocaleString();
+        
         setTimeout(() => {
             const smallElement = document.createElement("small");
             smallElement.textContent = localeDateTime;
@@ -12,6 +14,7 @@ sendMessages = (array, message) => {
             messageElement.textContent = name + ": Hi, " + name + "! " + message;
             document.body.appendChild(messageElement);
         }, 500 * index);
+
     });
 }
 

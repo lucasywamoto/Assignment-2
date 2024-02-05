@@ -1,12 +1,16 @@
 const studentNames = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Hannah", "Ian", "Jasmine"];
-let i = 0;
 
 sendMessages = (array, message) => {
     array.forEach((name, index) => {
-        var jsonDate = (new Date()).toJSON();
+        var localeDateTime = (new Date()).toLocaleString();
         setTimeout(() => {
-            document.write("<small>" + jsonDate + "</small><br>");
-            document.write(jsonDate + name + ": Hi, " + name + "! " + message + "🙂<br><br>");
+            const smallElement = document.createElement("small");
+            smallElement.textContent = localeDateTime;
+            document.body.appendChild(smallElement);
+            
+            const messageElement = document.createElement("div");
+            messageElement.textContent = name + ": Hi, " + name + "! " + message + "🙂";
+            document.body.appendChild(messageElement);
         }, 500 * index);
     });
 }

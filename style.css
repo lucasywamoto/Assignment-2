@@ -1,9 +1,18 @@
-small {
+* {
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
 }
 
-body {
-    background-color: aqua;
-    border: 1px solid black;
+small {
+    font-weight: bold;
+    margin-left: 12px;
+    color: gray;
+}
+
+div {
+    border: 2px solid #00bbff;
+    border-radius: 6px;
+    margin: 12px;
+    padding: 12px;
+    width: fit-content;
+
 }
